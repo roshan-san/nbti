@@ -29,7 +29,13 @@ export const app = new Hono<HonoAuthContext>()
     //     return auth.handler(c.req.raw);
     // })
     .onError((err, c) => {
-        console.error("EDGE ERROR:", err)
-        return c.json({ error: err.message }, 500)
+        console.error("EDGE ERROR:", err);
+        // Log full error details for debugging
+        if (err.stack) {
+            console.error("Error stack:", err.stack);
+        }
+        // Return user-friendly error message
+        const message = err.message || "Internal server error";
+        return c.json({ error: message, success: false }, 500);
     })
     .route("/test", testRoute);
