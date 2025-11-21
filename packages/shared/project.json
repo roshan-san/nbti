@@ -1,14 +1,14 @@
-{
-  "name": "shared",
-  "projectType": "library",
-  "root": "packages/shared",
-  "targets": {
-    "typecheck": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "tsc --noEmit",
-        "cwd":"packages/shared"
+  {
+    "name": "shared",
+    "projectType": "library",
+    "root": "packages/shared",
+    "targets": {
+      "typecheck": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "tsc --noEmit",
+          "cwd":"packages/shared"
+        }
       }
     }
   }
-}
