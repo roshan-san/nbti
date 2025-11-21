@@ -1,10 +1,10 @@
 import { Hono } from "hono";
-import { auth, type HonoAuthContext } from "./lib/auth";
 import { testRoute } from "./routes/test.route";
-import { cors } from "hono/cors";
-import { HTTPException } from "hono/http-exception";
-import type { contracts } from "@nbti/shared";
-import { logger } from "hono/logger";
+import { type HonoAuthContext } from "./lib/auth";
+// import { cors } from "hono/cors";
+// import { HTTPException } from "hono/http-exception";
+// import type { contracts } from "@nbti/shared";
+// import { logger } from "hono/logger";
 export const app = new Hono<HonoAuthContext>()
     .basePath("/v1")
     // .use("*", cors({
