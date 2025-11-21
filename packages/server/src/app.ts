@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { testRoute } from "./routes/test.route";
-import { type HonoAuthContext } from "./lib/auth";
+import { type HonoAuthContext } from "@/lib/auth";
 // import { cors } from "hono/cors";
 // import { HTTPException } from "hono/http-exception";
 // import type { contracts } from "@nbti/shared";
