@@ -1,5 +1,9 @@
 export type SuccessResponse = {
-    success: boolean,
+    success: true,
     message: string,
     data?: any
+}
+export type ErrorResponse = {
+    success: boolean,
+    message: string,
 }
