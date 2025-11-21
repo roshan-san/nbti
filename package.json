@@ -1,7 +1,6 @@
 {
   "name": "nbti",
   "private": true,
-  "typecheck":" ",
   "devDependencies": {
     "@types/node": "^24.9.1",
     "nx": "22.0.1",

@@ -10,13 +10,6 @@
         "cwd": "packages/server"
       }
     },
-    "build": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "bun build src/index.ts --outfile ./dist/index.js --target node --format esm --minify",
-        "cwd": "packages/server"
-      }
-    },
     
     "typecheck": {
       "executor": "nx:run-commands",
