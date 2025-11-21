@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { testRoute } from "./routes/test.route";
+import { testRoute } from "./routes/test.route.ts";
 // import { cors } from "hono/cors";
 // import { HTTPException } from "hono/http-exception";
 // import type { contracts } from "@nbti/shared";
@@ -27,15 +27,15 @@ const app = new Hono()
     // .on(["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"], "/auth/*", (c) => {
     //     return auth.handler(c.req.raw);
     // })
-    .onError((err, c) => {
-        console.error("EDGE ERROR:", err);
-        // Log full error details for debugging
-        if (err.stack) {
-            console.error("Error stack:", err.stack);
-        }
-        // Return user-friendly error message
-        const message = err.message || "Internal server error";
-        return c.json({ error: message, success: false }, 500);
-    })
+    // .onError((err, c) => {
+    //     console.error("EDGE ERROR:", err);
+    //     // Log full error details for debugging
+    //     if (err.stack) {
+    //         console.error("Error stack:", err.stack);
+    //     }
+    //     // Return user-friendly error message
+    //     const message = err.message || "Internal server error";
+    //     return c.json({ error: message, success: false }, 500);
+    // })
     .route("/test", testRoute);
 export default app;
