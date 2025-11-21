@@ -28,4 +28,8 @@ export const app = new Hono<HonoAuthContext>()
     // .on(["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"], "/auth/*", (c) => {
     //     return auth.handler(c.req.raw);
     // })
+    .onError((err, c) => {
+        console.error("EDGE ERROR:", err)
+        return c.json({ error: err.message }, 500)
+    })
     .route("/test", testRoute);
