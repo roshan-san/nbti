@@ -4,7 +4,7 @@ import { testRoute } from "./routes/test.route";
 // import { HTTPException } from "hono/http-exception";
 // import type { contracts } from "@nbti/shared";
 // import { logger } from "hono/logger";
-export const app = new Hono()
+const app = new Hono()
     .basePath("/v1")
     // .use("*", cors({
     //     origin: (origin) => origin,
@@ -38,3 +38,4 @@ export const app = new Hono()
         return c.json({ error: message, success: false }, 500);
     })
     .route("/test", testRoute);
+export default app;

@@ -10,13 +10,6 @@
         "cwd": "packages/server"
       }
     },
-    "build":{
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "pnpm tsup",
-        "cwd":"packages/server"
-      }
-    },
     
     "typecheck": {
       "executor": "nx:run-commands",
