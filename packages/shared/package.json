@@ -1,0 +1,14 @@
+{
+    "name": "@nbti/shared",
+    "packageManager": "pnpm@10.16.1",
+    "dependencies": {
+        "dotenv": "^17.2.3",
+        "drizzle-orm": "^0.44.7",
+        "drizzle-query-logger": "^1.1.1",
+        "drizzle-zod": "^0.8.3",
+        "zod": "^4.1.12"
+    },
+    "devDependencies": {
+        "drizzle-kit": "^0.31.6"
+    }
+}

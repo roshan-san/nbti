@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "projectType": "application",
+  "root": "packages/server",
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "bun --hot src/index.ts",
+        "cwd": "packages/server"
+      }
+    },
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc --noEmit",
+        "cwd":"packages/server"
+      }
+    }
+  }
+}

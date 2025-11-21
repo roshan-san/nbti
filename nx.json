@@ -1,0 +1,16 @@
+{
+    "extends": "nx/presets/npm.json",
+    "targetDefaults": {
+      "build": {
+        "dependsOn": ["^build"]
+      },
+      "dev": {
+        "dependsOn": ["^dev"]
+      }
+    },
+    "workspaceLayout": {
+      "appsDir": "packages",
+      "libsDir": "packages"
+    }
+  }
+  
